@@ -1,0 +1,29 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profit Prediction</title>
+</head>
+<body>
+    <h1>Profit Prediction</h1>
+    <p> Example input R&D Spend: 165349.20
+         Administration Spend: 136897.20
+         Marketing Spend: 471784.10
+    </p>
+    <form method="POST" action="/predict">
+        <label for="rd_spend">R&D Spend:</label>
+        <input type="number" name="rd_spend" id="rd_spend" step="0.01" required><br><br>
+        <label for="admin_spend">Administration Spend:</label>
+        <input type="number" name="admin_spend" id="admin_spend" step="0.01" required><br><br>
+        <label for="marketing_spend">Marketing Spend:</label>
+        <input type=min name="marketing_spend" id="marketing_spend" required><br><br>
+        <input type="submit" value="Predict">
+    </form>
+
+ <br>
+   <br>
+   <h4>
+   {{ prediction }} </h4>
+</body>
+</html>
